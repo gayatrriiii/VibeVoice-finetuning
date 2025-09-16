@@ -1,0 +1,35 @@
+[project]
+name = "vibevoice-finetuning"
+version = "0.1.0"
+description = "Open Source finetuning code for VibeVoice"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "jpgallegoarvpb", email = "juanpablo.gallego@voicepowered.ai"}
+]
+dependencies = [
+    "numpy~=1.26.0",
+    "resampy==0.4.3",
+    "librosa==0.11.0",
+    "s3tokenizer",
+    "torch",
+    "torchaudio",
+    "transformers",
+    "datasets>=2.18.0",
+    "diffusers==0.29.0",
+    "resemble-perth==1.0.1",
+    "omegaconf==2.3.0",
+    "conformer==0.3.2",
+    "safetensors==0.5.3",
+    "peft>=0.11.0",
+    "tensorboard>=2.12",
+    "wandb"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
