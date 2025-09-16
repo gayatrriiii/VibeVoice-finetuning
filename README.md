@@ -100,8 +100,6 @@ python -m src.finetune_vibevoice_lora \
 
 --save_steps 100 \
 
---evaluation_strategy steps \
-
 --eval_steps 100 \
 
 --report_to wandb \
@@ -169,8 +167,6 @@ python -m src.finetune_vibevoice_lora \
 --logging_steps 10 \
 
 --save_steps 100 \
-
---evaluation_strategy no \
 
 --report_to wandb \
 
@@ -761,3 +757,4 @@ Special arguments to control VibeVoice-specific training behaviors.
 
 
 ```
+
