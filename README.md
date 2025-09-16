@@ -28,9 +28,6 @@ Transformers version 4.51.3 is known to work, while other versions have errors r
   
 
 ```
-
-  
-
 pip install -e .
 
 pip uninstall -y transformers && pip install transformers==4.51.3
@@ -38,9 +35,6 @@ pip uninstall -y transformers && pip install transformers==4.51.3
 (OPTIONAL) wandb login
 
 (OPTIONAL) export HF_HOME=/workspace/hf_models
-
-  
-
 ```
 
   
@@ -77,8 +71,8 @@ Requirements:
 ### Training with Hugging Face Dataset
 
   
-
-`python -m src.finetune_vibevoice_lora \
+```
+python -m src.finetune_vibevoice_lora \
 
 --model_name_or_path aoi-ot/VibeVoice-Large \
 
@@ -138,8 +132,8 @@ Requirements:
 
 --warmup_ratio 0.03 \
 
---max_grad_norm 0.8`
-
+--max_grad_norm 0.8
+```
   
 
 ----------
@@ -149,8 +143,8 @@ Requirements:
 ### Training with Local JSONL Dataset
 
   
-
-`python -m src.finetune_vibevoice_lora \
+```
+python -m src.finetune_vibevoice_lora \
 
 --model_name_or_path aoi-ot/VibeVoice-Large \
 
@@ -206,7 +200,9 @@ Requirements:
 
 --warmup_ratio 0.03 \
 
---max_grad_norm 0.8`
+--max_grad_norm 0.8
+```
+
 
 ### JSONL format:
 
@@ -415,7 +411,7 @@ Controls the base model, its configuration, and which components are trained.
 
 *  `--layers_to_freeze`
 
-*  **What it does:** Comma-separated indices of diffusion head layers to freeze (e.g., '0,1,5,7,8'). [Diffusion head layer indices](google.com)
+*  **What it does:** Comma-separated indices of diffusion head layers to freeze (e.g., '0,1,5,7,8'). [Diffusion head layer indices](https://github.com/voicepowered-ai/VibeVoice-finetuning/blob/main/diff_head_layers.txt)
 
 *  **Default:**  `None`
 
@@ -762,5 +758,6 @@ Special arguments to control VibeVoice-specific training behaviors.
 ```bash
 
 --ddpm_batch_mul 4
+
 
 ```
