@@ -26,8 +26,9 @@ It is recommended to install this in a fresh environment. Specifically, the Dock
 Transformers version 4.51.3 is known to work, while other versions have errors related to Qwen2 architecture.
 
   
-
 ```
+git clone https://github.com/voicepowered-ai/VibeVoice-finetuning
+
 pip install -e .
 
 pip uninstall -y transformers && pip install transformers==4.51.3
@@ -757,4 +758,5 @@ Special arguments to control VibeVoice-specific training behaviors.
 
 
 ```
+
 
